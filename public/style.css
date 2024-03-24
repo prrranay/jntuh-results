@@ -2,8 +2,8 @@
 
 
 :root{
-  --col: #FBC50F;
-  --col2: #F34C19;
+  --col: #F34C19;
+  --col2: #FBC50F;
   --col3: #fffaff;
   --col4: #333F72;
 }
@@ -30,7 +30,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: var(--col4);
+  background-color: grey;
 }
 
 .container {
@@ -194,19 +194,19 @@ td {
 
 @keyframes rotateShadow {
   0% {
-    box-shadow: -2px -2px 8px 1px var(--col2), 2px 2px 8px 1px #3700ff;
+    box-shadow: -2px -2px 8px 1px var(--col2), 2px 2px 8px 1px var(--col4);
   }
   25% {
-    box-shadow: -2px 2px 8px 1px var(--col2), 2px -2px 8px 1px #3700ff;
+    box-shadow: -2px 2px 8px 1px var(--col2), 2px -2px 8px 1px var(--col4);
   }
   50% {
-    box-shadow: 2px 2px 8px 1px var(--col2), -2px -2px 8px 1px #3700ff;
+    box-shadow: 2px 2px 8px 1px var(--col2), -2px -2px 8px 1px var(--col4);
   }
   75% {
-    box-shadow: 2px -2px 8px 1px var(--col2), -2px 2px 8px 1px #3700ff;
+    box-shadow: 2px -2px 8px 1px var(--col2), -2px 2px 8px 1px var(--col4);
   }
   100% {
-    box-shadow: -2px -2px 8px 1px var(--col2), 2px 2px 8px 1px #3700ff;
+    box-shadow: -2px -2px 8px 1px var(--col2), 2px 2px 8px 1px var(--col4);
   }
 }
 
