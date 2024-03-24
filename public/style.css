@@ -2,10 +2,12 @@
 
 
 :root{
-  --col: #F34C19;
+  /* --col: #F34C19; */
+  --col: #0f0f0f;
   --col2: #FBC50F;
   --col3: #fffaff;
-  --col4: #333F72;
+  --col4: #F34C19;
+  /* --col4: #333F72; */
 }
 
 * {
@@ -19,6 +21,20 @@
 #flex{
   display: flex;
   gap: 1.5rem;
+}
+.nav{
+  background-color: #1f1f1f;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.input-data{
+  margin: 2rem;
+}
+img{
+  height: 8rem;
+  width: 5rem;
 }
 #total{
   color: var(--col3);
@@ -35,15 +51,13 @@ body {
 
 .container {
   background-color: var(--col);
-  padding: 2rem;
-  border-radius: 1rem;
-  min-height: 45vh;
-  width: 60vw;
-  margin: 10px 0;
+  min-height: 100vh;
+  width: 100vw;
 }
 
 h2 {
-  color: var(--col4);
+  color: var(--col2);
+  padding: 0.7rem 0;
 }
 p {
   color: var(--col2);
@@ -56,6 +70,10 @@ form {
 
 .hall {
   margin: 2rem 0;
+}
+.hall h3{
+  color: var(--col4);
+  padding: 0.7rem 0;
 }
 
 form input,
@@ -84,11 +102,12 @@ form button {
 #resultContainer {
   background-color: var(--col);
   border-radius: 0.7rem;
+  margin: 2rem;
 }
 #resultContainer p {
   color: var(--col3);
 }
-#resultContainer h2,
+#resultContainer
 h3 {
   color: var(--col4);
   padding: 0.7rem 0;
@@ -113,6 +132,7 @@ td {
   text-align: center;
 }
 .made {
+  margin: 2rem;
   padding: 0.7rem;
   text-align: center;
   font-size: 1rem;
@@ -185,7 +205,7 @@ td {
   border: none;
   border-radius: 10px;
   outline: none;
-  color: black;
+  color: var(--col2);
 }
 
 .input:focus {
@@ -272,15 +292,21 @@ td {
     display: inline-block;
   }
   .container {
-    width: 100%;
-    min-height: 109vh;
+    width: 100vw;
+    min-height: 100vh;
     margin: 0;
     border-radius: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-
+  .nav{
+    border-radius: 0;
+  }
+  img{
+    height: 6rem;
+    width: 3.8rem;
+  }
   .select-cntr {
     padding: 0.1rem;
   }
