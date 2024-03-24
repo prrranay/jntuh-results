@@ -55,17 +55,15 @@ To run the application locally, follow these steps:
 
 ## Deployment
 
-The application is deployed on Vercel. Any changes pushed to the main branch of the repository trigger automatic deployments, ensuring that the latest version of the application is always available online.
+The application is deployed on Vercel platform. You can access it at the following address:
+`https://jntuh-results-black.vercel.app`
 
 ## Contributing
 
 Contributions are welcome! If you'd like to contribute to the project, feel free to submit a pull request or open an issue.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgements
 
 - Special thanks to [ThilakReddyy](https://github.com/ThilakReddyy) for providing the API to fetch examination results.
-- This project was made possible by the contributions of the open-source community.
+- Special thanks to the Node.js, Express.js, and Vercel communities for their valuable resources and support.
