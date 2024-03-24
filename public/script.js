@@ -60,10 +60,8 @@ function displayResults(data) {
   setTimeout(function () {
     // Display student details
     var detailsHTML = `<h2>Student Details</h2>
-                          <p>Name: ${data.Details.NAME}</p>
-                          <p>Roll Number: ${data.Details.Roll_No}</p>
-                          <p>College Code: ${data.Details.COLLEGE_CODE}</p>
-                          <p>Father's Name: ${data.Details.FATHER_NAME}</p>`;
+    <table><tr><th>Name</th><th>Roll Number</th><th>College Code</th><th>Father's Name</th></tr>
+    <td>${data.Details.NAME}</td><td>${data.Details.Roll_No}</td><td>${data.Details.COLLEGE_CODE}</td><td>${data.Details.FATHER_NAME}</td></tr></table>`;
 
     // Display fetched results
     var resultHTML = "<h2>Results</h2>";
@@ -85,7 +83,7 @@ function displayResults(data) {
 
       resultHTML += `<h3>Semester ${semester}</h3>`;
       resultHTML +=
-        "<table><tr><th>Subject Code</th><th>Subject Name</th><th>Internal</th><th>External</th><th>Grade</th><th>Credits</th></tr>";
+        "<table><tr><th>Subject Code</th><th>Subject Name</th><th>Internal</th><th>External</th><th>Total</th><th>Grade</th><th>Credits</th></tr>";
 
       for (const subjectCode in semesterData) {
         const subject = semesterData[subjectCode];
@@ -106,7 +104,7 @@ function displayResults(data) {
             grade=`<span id="red">Ab</span>`;
             totalBacklogs++;
           }
-          resultHTML += `<tr><td>${subject.subject_code}</td><td>${subject.subject_name}</td><td>${subject.subject_internal}</td><td>${subject.subject_external}</td><td>${grade}</td><td>${subject.subject_credits}</td></tr>`;
+          resultHTML += `<tr><td>${subject.subject_code}</td><td>${subject.subject_name}</td><td>${subject.subject_internal}</td><td>${subject.subject_external}</td><td>${subject.subject_total}</td><td>${grade}</td><td>${subject.subject_credits}</td></tr>`;
         }
       }
 
@@ -115,7 +113,7 @@ function displayResults(data) {
         totalCGPA += semesterSGPA;
         resultHTML += `<tr><td colspan="6">SGPA: ${semesterSGPA}</td></tr>`;
       } else {
-        resultHTML += `<tr><td colspan="6">CGPA: -</td></tr>`;
+        resultHTML += `<tr><td colspan="6">SGPA: -</td></tr>`;
       }
 
       resultHTML += "</table>";
