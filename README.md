@@ -8,7 +8,6 @@ This project is a web application designed to fetch results of Jawaharlal Nehru 
 - **Result Fetching**: Users can input their hall ticket numbers to fetch their examination results from the JNTUH database.
 - **Responsive Design**: The website is designed to be responsive, ensuring a seamless experience across various devices and screen sizes.
 - **User-Friendly Interface**: The interface is intuitive and easy to navigate, allowing users to quickly access the desired information.
-- **Secure**: The application ensures the security of user data and interactions.
 
 ## Technologies Used
 
