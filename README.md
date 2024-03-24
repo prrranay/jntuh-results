@@ -1,7 +1,12 @@
-# JNTUH Result Fetcher Website
+# JNTUH Result - Web
 
 ## Description
 This project is a web application designed to fetch results of Jawaharlal Nehru Technological University Hyderabad (JNTUH) using an API developed by [ThilakReddyy](https://github.com/ThilakReddyy). It provides a convenient way for students to access their examination results online. The backend of the application is built using Node.js and Express.js, while the frontend utilizes HTML, CSS, and JavaScript. The application is deployed on Vercel at [https://jntuh-results-black.vercel.app](https://jntuh-results-black.vercel.app), ensuring easy accessibility and scalability.
+
+## Usage
+- Enter the HallTicket No in the provided fields for the test case you can use `22S15A0513`.
+- Click on the "Results" button.
+- The application will fetch the result from JNTUH using the provided API and display it on the screen.
 
 ## Features
 
@@ -23,16 +28,12 @@ This project is a web application designed to fetch results of Jawaharlal Nehru 
 - **Deployment**:
   - Vercel: A cloud platform for deploying serverless functions and static websites. It offers seamless deployment and scalability for web applications.
 
-## Usage
-- Enter the HallTicket No in the provided fields for the test case you can use `22S15A0513`.
-- Click on the "Results" button.
-- The application will fetch the result from JNTUH using the provided API and display it on the screen.
-
 ## API Endpoint
 -The API endpoint used to fetch results from JNTUH is:
  ```bash
 https://jntuhresults.up.railway.app/api/academicresult?htno={RollNO}
 ```
+- Replace {RollNO} with the actual Roll Number to fetch the result.
 
 ## Installation
 
@@ -77,4 +78,4 @@ Contributions are welcome! If you'd like to contribute to the project, feel free
 ## Acknowledgements
 
 - Special thanks to [ThilakReddyy](https://github.com/ThilakReddyy) for providing the API to fetch examination results.
-- Special thanks to the Node.js, Express.js, and Vercel communities for their valuable resources and support.
+- Special thanks to the Node.js, Express.js, and Vercel communities for their valuable resources.
