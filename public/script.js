@@ -123,7 +123,7 @@ function displayResults(data) {
     const cgpa = data.Results.Total;
 
     // Display SGPA and backlogs
-    resultHTML += `<div id="flex"><h3>CGPA:&nbsp;<span id="total">${cgpa}</span></h3><h3>Backlogs:&nbsp;<span id="total">${totalBacklogs}</span></h3></div>`;
+    resultHTML += `<div class="flex"><h3>CGPA:&nbsp;<span id="total">${cgpa}</span></h3><h3>Backlogs:&nbsp;<span id="total">${totalBacklogs}</span></h3></div>`;
 
     resultContainer.innerHTML = detailsHTML + resultHTML;
   }, 2000); // Simulating loading delay of 2 seconds
@@ -131,5 +131,9 @@ function displayResults(data) {
 
 function displayError(message) {
   var resultContainer = document.getElementById("resultContainer");
-  resultContainer.innerHTML = `<div style="color: red;">${message}</div>`;
+  resultContainer.innerHTML = `
+  <div class="flex flex-col" >
+  <div class="error">${message}</div>
+  <div><img src="assets/error.png" alt=".."></div>
+  </div>`;
 }
