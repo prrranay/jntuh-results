@@ -111,7 +111,7 @@ function displayResults(data) {
       const semesterSGPA = parseFloat(semesterData.CGPA);
       if (!isNaN(semesterSGPA)) {
         totalCGPA += semesterSGPA;
-        resultHTML += `<tr><td colspan="6">SGPA: ${semesterSGPA}</td></tr>`;
+        resultHTML += `<tr><td colspan="7">SGPA: ${semesterSGPA}</td></tr>`;
       } else {
         resultHTML += `<tr><td colspan="7">SGPA: -</td></tr>`;
       }
