@@ -10,6 +10,11 @@
   /* --col4: #333F72; */
 }
 
+::selection {
+  color: var(--col4);
+  background: var(--col2);
+}
+
 * {
   margin: 0;
   padding: 0;
