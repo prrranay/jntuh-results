@@ -2,6 +2,7 @@ document
   .getElementById("resultsForm")
   .addEventListener("submit", function (event) {
     event.preventDefault();
+    document.getElementById("button").disabled=true;
     fetchResults();
   });
 
@@ -31,10 +32,12 @@ function fetchResults() {
     })
     .then((data) => {
       displayResults(data);
+      document.getElementById("button").disabled=false;
     })
     .catch((error) => {
       console.error("Error fetching results:", error);
       displayError("Failed to fetch results. Please try again later.");
+      document.getElementById("button").disabled=false;
     });
 }
 
