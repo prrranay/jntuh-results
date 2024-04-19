@@ -12,6 +12,11 @@ document.getElementById("rollNoInput").addEventListener("keyup",function (e){
 
 function fetchResults() {
   var rollNo = document.getElementById("rollNoInput").value;
+  if(rollNo.length!=10){
+    displayError("Invalid Roll Number please try again!");
+    document.getElementById("button").disabled=false;
+    return;
+  }
   var apiUrl = `/fetch_results?rollNo=${rollNo}`;
   var resultContainer = document.getElementById("resultContainer");
   // Display loading indicator
@@ -36,7 +41,7 @@ function fetchResults() {
     })
     .catch((error) => {
       console.error("Error fetching results:", error);
-      displayError("Failed to fetch results. Please try again later.");
+      displayError("Server Low, Please try again later!");
       document.getElementById("button").disabled=false;
     });
 }

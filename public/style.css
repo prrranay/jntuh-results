@@ -2,17 +2,17 @@
 
 :root {
   /* --col: #F34C19; */
-  --col: #0f0f0f;
-  --col2: #fbc50f;
-  --col3: #fffaff;
-  --col4: #f34c19;
-  --col5: #1f1f1f;
-  /* --col4: #333F72; */
+  --black: #0f0f0f;
+  --yelow: #fbc50f;
+  --whilte: #fffaff;
+  --red: #f34c19;
+  --gray: #1f1f1f;
+  /* --red: #333F72; */
 }
 
 ::selection {
-  color: var(--col4);
-  background: var(--col2);
+  color: var(--red);
+  background: var(--yelow);
 }
 
 * {
@@ -21,7 +21,7 @@
   font-family: "Roboto", sans-serif;
 }
 #red {
-  color: var(--col4);
+  color: var(--red);
 }
 .flex {
   display: flex;
@@ -33,13 +33,13 @@
   align-items: center;
 }
 .error {
-  color: var(--col4);
+  color: var(--red);
   text-align: center;
   font-size: 2.3rem;
 }
 
 .nav {
-  background-color: var(--col5);
+  background-color: var(--gray);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -53,7 +53,7 @@ img {
   width: 5rem;
 }
 #total {
-  color: var(--col3);
+  color: var(--whilte);
   font-size: 1.1rem;
 }
 body {
@@ -66,17 +66,17 @@ body {
 }
 
 .container {
-  background-color: var(--col);
+  background-color: var(--black);
   min-height: 100vh;
   width: 100vw;
 }
 
 h2 {
-  color: var(--col2);
+  color: var(--yelow);
   padding: 0.7rem 0;
 }
 p {
-  color: var(--col2);
+  color: var(--yelow);
   margin: 1rem 0;
 }
 
@@ -88,7 +88,7 @@ form {
   margin: 2rem 0;
 }
 .hall h3 {
-  color: var(--col4);
+  color: var(--red);
   padding: 0.7rem 0;
 }
 
@@ -102,40 +102,40 @@ button {
 
 form button {
   height: 3rem;
-  background-color: var(--col2);
-  color: var(--col3);
+  background-color: var(--yelow);
+  color: var(--whilte);
   font-size: 1.1rem;
   cursor: pointer;
 }
 #resultContainer {
-  background-color: var(--col);
+  background-color: var(--black);
   border-radius: 0.7rem;
   margin: 2rem;
 }
 #resultContainer p {
-  color: var(--col3);
+  color: var(--whilte);
 }
 #resultContainer h3 {
-  color: var(--col4);
+  color: var(--red);
   padding: 0.7rem 0;
 }
 #resultContainer table {
-  border: 1px solid var(--col2);
+  border: 1px solid var(--yelow);
   border-collapse: collapse;
   border-radius: 2rem;
   width: 100%;
 }
 #resultContainer th,
 td {
-  border: 1px solid var(--col2);
+  border: 1px solid var(--yelow);
   padding: 2px;
 }
 #resultContainer th {
-  background-color: var(--col2);
-  color: var(--col4);
+  background-color: var(--yelow);
+  color: var(--red);
 }
 #resultContainer td {
-  color: var(--col3);
+  color: var(--whilte);
   text-align: center;
 }
 .made {
@@ -143,10 +143,10 @@ td {
   padding: 0.7rem;
   text-align: center;
   font-size: 1rem;
-  color: var(--col2);
+  color: var(--yelow);
 }
 .made a {
-  color: var(--col3);
+  color: var(--whilte);
   font-size: 1.2rem;
 }
 
@@ -155,11 +155,11 @@ td {
 .loading {
   --speed-of-animation: 0.9s;
   --gap: 6px;
-  --first-color: var(--col2);
-  --second-color: var(--col2);
-  --third-color: var(--col2);
-  --fourth-color: var(--col2);
-  --fifth-color: var(--col2);
+  --first-color: var(--yelow);
+  --second-color: var(--yelow);
+  --third-color: var(--yelow);
+  --fourth-color: var(--yelow);
+  --fifth-color: var(--yelow);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -211,13 +211,13 @@ td {
 .input {
   width: calc(100% - 1rem);
   padding: 0 0.5rem;
-  background-color: var(--col3);
+  background-color: var(--whilte);
   font-size: 1rem;
   height: 3rem;
   border: none;
   border-radius: 10px;
   outline: none;
-  color: var(--col2);
+  color: var(--black);
 }
 
 .input:focus {
@@ -226,27 +226,27 @@ td {
 
 @keyframes rotateShadow {
   0% {
-    box-shadow: -2px -2px 8px 1px var(--col2), 2px 2px 8px 1px var(--col4);
+    box-shadow: -2px -2px 8px 1px var(--yelow), 2px 2px 8px 1px var(--red);
   }
   25% {
-    box-shadow: -2px 2px 8px 1px var(--col2), 2px -2px 8px 1px var(--col4);
+    box-shadow: -2px 2px 8px 1px var(--yelow), 2px -2px 8px 1px var(--red);
   }
   50% {
-    box-shadow: 2px 2px 8px 1px var(--col2), -2px -2px 8px 1px var(--col4);
+    box-shadow: 2px 2px 8px 1px var(--yelow), -2px -2px 8px 1px var(--red);
   }
   75% {
-    box-shadow: 2px -2px 8px 1px var(--col2), -2px 2px 8px 1px var(--col4);
+    box-shadow: 2px -2px 8px 1px var(--yelow), -2px 2px 8px 1px var(--red);
   }
   100% {
-    box-shadow: -2px -2px 8px 1px var(--col2), 2px 2px 8px 1px var(--col4);
+    box-shadow: -2px -2px 8px 1px var(--yelow), 2px 2px 8px 1px var(--red);
   }
 }
 
 /* button styling */
 
 .btn {
-  --color: var(--col3);
-  --color2: var(--col2);
+  --color: var(--whilte);
+  --color2: var(--yelow);
   padding: 0.8em 1.75em;
   background-color: var(--color2);
   border-radius: 6px;
