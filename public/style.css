@@ -59,14 +59,14 @@ img {
 }
 body {
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-color: grey;
 }
 
 .container {
   display: none;
   background-color: var(--black);
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -314,7 +314,7 @@ td {
 
 @media screen and (max-width: 800px) {
   .container {
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     border-radius: 0;
     display: flex;
@@ -345,9 +345,6 @@ td {
     display: none;
   }
   .printContainer{
-    display: none;
-  }
-  .made{
     display: none;
   }
 }
