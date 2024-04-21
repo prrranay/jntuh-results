@@ -132,7 +132,7 @@ function displayResults(data) {
 
     // Display SGPA and backlogs
     resultHTML += `<div class="flex"><h3>CGPA:&nbsp;<span id="total">${cgpa}</span></h3><h3>Backlogs:&nbsp;<span id="total">${totalBacklogs}</span></h3></div>`;
-
+    resultHTML += '<div class="printContainer"><button class="btn" onClick="window.print()" id="print">Print Results</button></div>'
     resultContainer.innerHTML = detailsHTML + resultHTML;
   }, 2000); // Simulating loading delay of 2 seconds
 }

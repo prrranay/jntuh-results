@@ -195,6 +195,16 @@ td {
   animation-delay: -0.5s;
 }
 
+.printContainer {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding: 2rem;
+}
+#print{
+  width: 20%;
+}
+
 @keyframes scale {
   0%,
   40%,
@@ -330,5 +340,20 @@ td {
 
   #resultContainer table {
     font-size: 0.5rem;
+  }
+  #print{
+    width: 80%;
+  }
+}
+
+@media print{
+  .input-data *{
+    display: none;
+  }
+  .printContainer{
+    display: none;
+  }
+  .made{
+    display: none;
   }
 }
