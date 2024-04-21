@@ -3,6 +3,7 @@ document
   .addEventListener("submit", function (event) {
     event.preventDefault();
     document.getElementById("button").disabled=true;
+    document.querySelector(".input-data").style.display="none";
     fetchResults();
   });
 
