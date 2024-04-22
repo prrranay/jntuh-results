@@ -6526,11 +6526,7 @@ function displayResults(data) {
   resultContainer.innerHTML = ""; // Clear previous results
   console.log(data);
 
-  if (!data || !data.Details || !data.Results) {
-    displayError("No results found.");
-    return;
-  }
-
+  
   // Display loading indicator
   resultContainer.innerHTML =  `<div class="loading">
   <span></span>
@@ -6538,8 +6534,12 @@ function displayResults(data) {
   <span></span>
   <span></span>
   <span></span>
-</div>`;
-
+  </div>`;
+  
+  if (!data || !data.Details || !data.Results) {
+    displayError("No results found.");
+    return;
+  }
   // Fetching results
   setTimeout(function () {
     // Display student details
@@ -6607,14 +6607,16 @@ function displayResults(data) {
     resultHTML += `<div class="flex"><h3>Backlogs:&nbsp;<span id="total">${totalBacklogs}</span></h3></div>`;
     resultHTML += '<div class="printContainer"><button class="btn" onClick="window.print()" id="print">Download Results</button></div>'
     resultContainer.innerHTML = detailsHTML + resultHTML;
-  }, 2000); // Simulating loading delay of 2 seconds
+  }, 500); // Simulating loading delay of 2 seconds
 }
 
 function displayError(message) {
+  setTimeout(function () {
   var resultContainer = document.getElementById("resultContainer");
   resultContainer.innerHTML = `
   <div class="flex flex-col" >
   <div class="error">${message}</div>
   <div><img src="assets/error.png" alt=".."></div>
   </div>`;
+}, 500); // Simulating loading delay of 2 seconds
 }

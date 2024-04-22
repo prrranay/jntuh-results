@@ -2,16 +2,18 @@ const express = require("express");
 const cors = require("cors");
 const path = require("path");
 
+var indexRouter = require("./routes/index");
+
 const app = express();
 const port = 3000;
 
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
+
+
+
 app.use(cors());
-app.get("/", (req, res) => {
-  res.redirect("index.html");
-});
-app.get("/2-2", (req, res) => {
-  res.redirect("/2-2/index.html");
-});
+app.use("/", indexRouter);
 app.use(express.static(path.join(__dirname, "public")));
 app.get("/fetch_results", async (req, res) => {
   const { rollNo } = req.query;
