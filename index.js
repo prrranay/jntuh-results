@@ -9,6 +9,9 @@ app.use(cors());
 app.get("/", (req, res) => {
   res.redirect("index.html");
 });
+app.get("/2-2", (req, res) => {
+  res.redirect("/2-2/index.html");
+});
 app.use(express.static(path.join(__dirname, "public")));
 app.get("/fetch_results", async (req, res) => {
   const { rollNo } = req.query;
