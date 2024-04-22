@@ -6,7 +6,16 @@ document
     document.querySelector(".input-data").style.display="none";
     fetchResults();
   });
-
+  let display = false;
+document.querySelector(".ham-links").addEventListener("click", function (e){
+  if(display){
+    document.querySelector(".nav-links-ham").style.display = "none";
+    display = false;
+  }else{
+  document.querySelector(".nav-links-ham").style.display = "flex";
+  display = true;
+  }
+});
 document.getElementById("rollNoInput").addEventListener("keyup",function (e){
     document.getElementById("rollNoInput").value=document.getElementById("rollNoInput").value.toUpperCase();
 })

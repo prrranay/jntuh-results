@@ -8,11 +8,41 @@
     <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
   </head>
   <body>
-    <div class="container">
+    <d<div class="navbar">
       <div class="nav">
-        <img src="assets/logo.png" onclick="location.reload()" alt="jntuhlogo">
-        <h2>Academic Results</h2>
+        <div class="logo">
+          <img
+            src="assets/logo.png"
+            onclick="location.reload()"
+            alt="jntuhlogo"
+          />
+        </div>
+        <h2>2-2 Semester Results</h2>
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <div class="dropdown">
+            <button>Class Results</button>
+            <div class="dropdown-options">
+              <a href="/2-1">2-1 Results</a>
+              <a href="/2-2">2-2 Results</a>
+            </div>
+          </div>
+        </div>
+        <div class="ham-links" >
+          <img src="assets/ham.svg" alt="..">
+        </div>
       </div>
+      <div class="nav-links-ham">
+        <a href="/">Home</a>
+        <div class="dropdown">
+          <button>Class Results</button>
+          <div class="dropdown-options">
+            <a href="/2-1">2-1 Results</a>
+            <a href="/2-2">2-2 Results</a>
+          </div>
+        </div>
+      </div>
+    </div>
       <div class="input-data">
         <form id="resultsForm">
           <div class="hall">

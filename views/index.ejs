@@ -5,13 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JNTUH Results</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
   </head>
   <body>
     <div class="container">
-      <div class="nav">
-        <img src="assets/logo.png" onclick="location.reload()" alt="jntuhlogo">
-        <h2>Academic Results</h2>
+      <div class="navbar">
+        <div class="nav">
+          <div class="logo">
+            <img
+              src="assets/logo.png"
+              onclick="location.reload()"
+              alt="jntuhlogo"
+            />
+          </div>
+          <h2>Academic Results</h2>
+          <div class="nav-links">
+            <a href="/">Home</a>
+            <div class="dropdown">
+              <button>Class Results</button>
+              <div class="dropdown-options">
+                <a href="/2-1">2-1 Results</a>
+                <a href="/2-2">2-2 Results</a>
+              </div>
+            </div>
+          </div>
+          <div class="ham-links" >
+            <img src="assets/ham.svg" alt="..">
+          </div>
+        </div>
+        <div class="nav-links-ham">
+          <a href="/">Home</a>
+          <div class="dropdown">
+            <button>Class Results</button>
+            <div class="dropdown-options">
+              <a href="/2-1">2-1 Results</a>
+              <a href="/2-2">2-2 Results</a>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="input-data">
         <form id="resultsForm">
@@ -19,13 +50,16 @@
             <h3>Enter Halticket No:</h3>
             <input id="rollNoInput" class="input" name="text" type="text" />
           </div>
-          <button onclick="fetchResults()" id="button" class="btn">Results</button>
+          <button onclick="fetchResults()" id="button" class="btn">
+            Results
+          </button>
         </form>
       </div>
       <div id="resultContainer"></div>
       <div class="made">
         <p>
-          Made with ❤ by <a href="https://github.com/prrranay/jntuh-results">Pranay Kumar</a>
+          Made with ❤ by
+          <a href="https://github.com/prrranay/jntuh-results">Pranay Kumar</a>
         </p>
       </div>
     </div>
