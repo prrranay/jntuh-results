@@ -6502,9 +6502,11 @@ let display = false;
 document.querySelector(".ham-links").addEventListener("click", function (e) {
   if (display) {
     document.querySelector(".nav-links-ham").style.display = "none";
+    document.getElementById("ham").src = "/assets/ham.svg";
     display = false;
   } else {
     document.querySelector(".nav-links-ham").style.display = "flex";
+    document.getElementById("ham").src = "/assets/cross.svg";
     display = true;
   }
 });

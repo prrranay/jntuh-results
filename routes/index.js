@@ -10,5 +10,8 @@ router.get("/2-1", (req, res) => {
 router.get("/2-2", (req, res) => {
   res.render("2-2");
 });
+router.get("/3-1", (req, res) => {
+  res.render("3-1");
+});
 
 module.exports = router;
