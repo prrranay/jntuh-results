@@ -2,35 +2,37 @@ document
   .getElementById("resultsForm")
   .addEventListener("submit", function (event) {
     event.preventDefault();
-    document.getElementById("button").disabled=true;
-    document.querySelector(".input-data").style.display="none";
+    document.getElementById("button").disabled = true;
+    document.querySelector(".input-data").style.display = "none";
     fetchResults();
   });
-  let display = false;
-document.querySelector(".ham-links").addEventListener("click", function (e){
-  if(display){
+let display = false;
+document.querySelector(".ham-links").addEventListener("click", function (e) {
+  if (display) {
     document.querySelector(".nav-links-ham").style.display = "none";
     display = false;
-  }else{
-  document.querySelector(".nav-links-ham").style.display = "flex";
-  display = true;
+  } else {
+    document.querySelector(".nav-links-ham").style.display = "flex";
+    display = true;
   }
 });
-document.getElementById("rollNoInput").addEventListener("keyup",function (e){
-    document.getElementById("rollNoInput").value=document.getElementById("rollNoInput").value.toUpperCase();
-})
+document.getElementById("rollNoInput").addEventListener("keyup", function (e) {
+  document.getElementById("rollNoInput").value = document
+    .getElementById("rollNoInput")
+    .value.toUpperCase();
+});
 
 function fetchResults() {
   var rollNo = document.getElementById("rollNoInput").value;
-  if(rollNo.length!=10){
+  if (rollNo.length != 10) {
     displayError("Invalid Roll Number please try again!");
-    document.getElementById("button").disabled=false;
+    document.getElementById("button").disabled = false;
     return;
   }
   var apiUrl = `/fetch_results?rollNo=${rollNo}`;
   var resultContainer = document.getElementById("resultContainer");
   // Display loading indicator
-  resultContainer.innerHTML =  `<div class="loading">
+  resultContainer.innerHTML = `<div class="loading">
   <span></span>
   <span></span>
   <span></span>
@@ -47,12 +49,12 @@ function fetchResults() {
     })
     .then((data) => {
       displayResults(data);
-      document.getElementById("button").disabled=false;
+      document.getElementById("button").disabled = false;
     })
     .catch((error) => {
       console.error("Error fetching results:", error);
       displayError("Server Low, Please try again later!");
-      document.getElementById("button").disabled=false;
+      document.getElementById("button").disabled = false;
     });
 }
 
@@ -66,7 +68,7 @@ function displayResults(data) {
   }
 
   // Display loading indicator
-  resultContainer.innerHTML =  `<div class="loading">
+  resultContainer.innerHTML = `<div class="loading">
   <span></span>
   <span></span>
   <span></span>
@@ -115,11 +117,11 @@ function displayResults(data) {
         ) {
           let grade = subject.subject_grade;
           if (grade === "F") {
-            grade=`<span id="red">F</span>`;
+            grade = `<span id="red">F</span>`;
             totalBacklogs++;
           }
           if (grade === "Ab") {
-            grade=`<span id="red">Ab</span>`;
+            grade = `<span id="red">Ab</span>`;
             totalBacklogs++;
           }
           resultHTML += `<tr><td>${subject.subject_code}</td><td>${subject.subject_name}</td><td>${subject.subject_internal}</td><td>${subject.subject_external}</td><td>${subject.subject_total}</td><td>${grade}</td><td>${subject.subject_credits}</td></tr>`;
@@ -142,7 +144,8 @@ function displayResults(data) {
 
     // Display SGPA and backlogs
     resultHTML += `<div class="flex"><h3>CGPA:&nbsp;<span id="total">${cgpa}</span></h3><h3>Backlogs:&nbsp;<span id="total">${totalBacklogs}</span></h3></div>`;
-    resultHTML += '<div class="printContainer"><button class="btn" onClick="window.print()" id="print">Download Results</button></div>'
+    resultHTML +=
+      '<div class="printContainer"><button class="btn" onClick="window.print()" id="print">Download Results</button></div>';
     resultContainer.innerHTML = detailsHTML + resultHTML;
   }, 2000); // Simulating loading delay of 2 seconds
 }
