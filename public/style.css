@@ -412,7 +412,7 @@ td {
  .ham-links{
   display: block;
   background-color: var(--yelow);
-  padding: 0.6rem;
+  padding: 0.3rem 0.6rem;
   border-radius: 0.7rem;
  }
  .ham-links img{
