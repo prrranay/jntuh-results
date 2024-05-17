@@ -479,4 +479,7 @@ td {
     align-items: center;
     justify-content: center;
   }
+  .made{
+    display: none;
+  }
 }

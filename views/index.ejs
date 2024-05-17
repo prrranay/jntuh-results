@@ -9,41 +9,7 @@
   </head>
   <body>
     <div class="container">
-      <div class="navbar">
-        <div class="nav">
-          <div class="logo">
-            <img
-              src="assets/logo.png"
-              onclick="location.reload()"
-              alt="jntuhlogo"
-            />
-          </div>
-          <h2>Academic Results</h2>
-          <div class="nav-links">
-            <a href="/">Home</a>
-            <div class="dropdown">
-              <button>Class Results</button>
-              <div class="dropdown-options">
-                <a href="/2-1">2-1 Results</a>
-                <a href="/2-2">2-2 Results</a>
-              </div>
-            </div>
-          </div>
-          <div class="ham-links" >
-            <img src="assets/ham.svg" id="ham" alt="..">
-          </div>
-        </div>
-        <div class="nav-links-ham">
-          <a href="/">Home</a>
-          <div class="dropdown">
-            <button>Class Results</button>
-            <div class="dropdown-options">
-              <a href="/2-1">2-1 Results</a>
-              <a href="/2-2">2-2 Results</a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <%- include('navbar'); %>
       <div class="input-data">
         <form id="resultsForm">
           <div class="hall">
