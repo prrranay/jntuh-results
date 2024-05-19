@@ -72,6 +72,10 @@
   font-size: 1.2rem;
   font-weight: 500;
 }
+
+.nav-links a:hover{
+  color: var(--red);
+}
 .dropdown {
   display: inline-block;
   position: relative;
@@ -457,6 +461,9 @@ td {
 }
 
 @media print{
+  .container{
+    justify-content: start;
+  }
   .input-data *{
     display: none;
   }
